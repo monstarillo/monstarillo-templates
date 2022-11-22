@@ -1,0 +1,22 @@
+{
+  "templates": [
+    {
+      "templateFile": "{{getTag .Tags \"TemplateRoot\"}}/tutorial-database-documenter/table.tmpl",
+      "generatedFileName": "{{ .CurrentTable.GetCamelCaseTableName}}.md",
+      "generatedFolderName": "tables",
+      "minimumGeneratedFileLength": 0,
+      "outputPath": "{{getTag .Tags \"OutputPath\"}}/",
+      "overwriteFile": true
+    }
+  ],
+  "tags": [
+    {
+      "tagName": "TemplateRoot",
+      "value": "/home/patrick/code/templates"
+    },
+    {
+      "tagName": "OutputPath",
+      "value": "/home/patrick/code-gen-output/postgres-chinhook-db-md"
+    }
+  ]
+}
