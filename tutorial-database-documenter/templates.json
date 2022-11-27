@@ -12,11 +12,11 @@
   "tags": [
     {
       "tagName": "TemplateRoot",
-      "value": "/home/patrick/code/templates"
+      "value": "/Users/patrickwright/code/monstarillo-templates"
     },
     {
       "tagName": "OutputPath",
-      "value": "/home/patrick/code-gen-output/postgres-chinhook-db-md"
+      "value": "/Users/patrickwright/code-gen-output/postgres-chinhook-db-md"
     }
   ]
 }
