@@ -1,0 +1,20 @@
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_DATABASE: employees
+    ports:
+      - "3306:3306"
+    volumes:
+      - "./employees.sql:/docker-entrypoint-initdb.d/1employees.sql"
+      - "./load_departments.dump:/docker-entrypoint-initdb.d/2load_departments.sql"
+      - "./load_dept_emp.dump:/docker-entrypoint-initdb.d/4load_dept_emp.sql"
+      - "./load_dept_manager.dump:/docker-entrypoint-initdb.d/5load_dept_manager.sql"
+      - "./load_employees.dump:/docker-entrypoint-initdb.d/3load_employees.sql"
+      - "./load_salaries1.dump:/docker-entrypoint-initdb.d/7load_salaries1.sql"
+      - "./load_salaries2.dump:/docker-entrypoint-initdb.d/8load_salaries2.sql"
+      - "./load_salaries3.dump:/docker-entrypoint-initdb.d/9load_salaries3.sql"
+      - "./load_titles.dump:/docker-entrypoint-initdb.d/6load_titles.sql"
