@@ -1,0 +1,14 @@
+FROM mysql:8.0 
+
+ENV MYSQL_DATABASE=employees
+
+RUN pwd
+COPY  employees.sql /docker-entrypoint-initdb.d/1employees.sql
+COPY  load_departments.dump /docker-entrypoint-initdb.d/2load_departments.sql
+COPY  load_dept_emp.dump /docker-entrypoint-initdb.d/4load_dept_emp.sql
+COPY  load_dept_manager.dump /docker-entrypoint-initdb.d/5load_dept_manager.sql
+COPY  load_employees.dump /docker-entrypoint-initdb.d/3load_employees.sql
+COPY  load_salaries1.dump /docker-entrypoint-initdb.d/7load_salaries1.sql
+COPY  load_salaries2.dump /docker-entrypoint-initdb.d/8load_salaries2.sql
+COPY  load_salaries3.dump /docker-entrypoint-initdb.d/9load_salaries3.sql
+COPY  load_titles.dump /docker-entrypoint-initdb.d/6load_titles.sql
