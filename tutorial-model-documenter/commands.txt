@@ -3,3 +3,6 @@ monstarillo js-orm --m /mnt/c/code/marcos/models.json \
 
 
 js-orm --m /mnt/c/code/marcos/models.json --t /mnt/c/code/monstarillo-templates/tutorial-model-documenter/templates.json
+
+node node_modules/sequelize-auto/bin/sequelize-auto -o "./models" -d chinhook-db -h localhost -u postgres -p 5432 -x example -e postgres --cm u --cp l 
+
