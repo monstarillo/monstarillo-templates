@@ -1,3 +1,5 @@
 monstarillo postgres --t /home/patrick/code/templates/tutorial-database-documenter/templates.json --u postgres --p <password> --db "chinhook-db" --host "localhost" --schema "public"
 
+monstarillo postgres --t /mnt/c/code/monstarillo-templates/tutorial-database-documenter/templates.json --u postgres --p example --db "chinhook-db" --host "localhost" --schema "public"
+
 monstarillo  mysql --t /home/patrick/code/monstarillo-templates/db-md/templates-mysql.json  --u quote_user --p <password> --db "tcp(kwamae:3306)/quote_gen" --schema quote_gen 

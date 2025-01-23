@@ -1,8 +1,8 @@
 {
   "templates": [
     {
-      "templateFile": "{{getTag .Tags \"TemplateRoot\"}}/tutorial-database-documenter/table.tmpl",
-      "generatedFileName": "{{ .CurrentTable.GetCamelCaseTableName}}.md",
+      "templateFile": "{{getTag .Tags \"TemplateRoot\"}}/tutorial-model-documenter/model.tmpl",
+      "generatedFileName": "{{ .CurrentModel.GetModelNameInCase \"snake\"}}.md",
       "generatedFolderName": "tables",
       "minimumGeneratedFileLength": 0,
       "outputPath": "{{getTag .Tags \"OutputPath\"}}/",
@@ -16,7 +16,7 @@
     },
     {
       "tagName": "OutputPath",
-      "value": "/mnt/c/code/code-gen-output/postgres-chinhook-db-md"
+      "value": "/mnt/c/code/code-gen-output/sequlize-chinhook-db-md"
     }
   ]
 }
