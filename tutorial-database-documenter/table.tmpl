@@ -1,9 +1,9 @@
 # {{.CurrentTable.GetPascalCaseTableName}}
 
 ## Columns
-|ColumnName|DB Data Type| Java DataType| C# DataType| Go Data Type|Is Primary Key|Is Nullable|Is Auto Increment|
-| ---- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |{{range .CurrentTable.Columns}}
-|{{.GetCamelCaseColumnName}}|{{.DataType}}|{{.GetJavaDataType}}|{{.GetCSharpDataType}}|{{.GetGoDataType}}|{{.IsPrimaryKey}} |{{.IsNullable}} |{{.IsAutoIncrement}}|{{end}}
+|ColumnName|DB Data Type| Java DataType| C# DataType| Go Data Type|Javascript Data Type|Is Primary Key|Is Nullable|Is Auto Increment|
+| ---- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |----- |{{range .CurrentTable.Columns}}
+|{{.GetCamelCaseColumnName}}|{{.DataType}}|{{.GetJavaDataType}}|{{.GetCSharpDataType}}|{{.GetGoDataType}}|{{.GetJavascriptDataType}}|{{.IsPrimaryKey}} |{{.IsNullable}} |{{.IsAutoIncrement}}|{{end}}
 
 ## Foreign Keys{{if gt ( len .CurrentTable.ForeignKeys) 0 }}
 | Constraint Name | Foreign Key Table Name | Foreign Key Column Name | Primary Key Table Name | Primary Key Column Name|

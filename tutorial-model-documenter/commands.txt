@@ -1,0 +1,5 @@
+monstarillo js-orm --m /mnt/c/code/marcos/models.json \
+--t /mnt/c/code/monstarillo-templates/tutorial-model-documenter/templates.json
+
+
+js-orm --m /mnt/c/code/marcos/models.json --t /mnt/c/code/monstarillo-templates/tutorial-model-documenter/templates.json

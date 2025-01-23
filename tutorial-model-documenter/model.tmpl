@@ -1,0 +1,6 @@
+# {{.CurrentModel.ModelName}}
+
+## Columns
+|ColumnName|OrmType| DatabaseType| PropertyName|IsPrimaryKey| IsNullable| IsAutoIncrement| 
+| ---- |---- |---- |---- |---- |---- |---- |{{range .CurrentModel.Columns}}
+|{{.GetColumnNameInCase "camel"}}|{{.OrmType}}| {{.DatabaseType}}| {{.PropertyName}}|{{.IsPrimaryKey}}| {{.IsNullable}}| {{.IsAutoIncrement}}| {{end}}
